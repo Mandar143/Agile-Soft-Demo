@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+
+}
+
+body,
+p {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-form-field {
+    width: 100%;
+    height: 82px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-label {
+    font-size: 16px;
+    top: 1.54375em;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label,
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    -webkit-transform: translateY(-1.29375em) scale(.75);
+    transform: translateY(-1.29375em) scale(.75);
+}
+
+.card-title {
+    border-bottom: 2px solid #f1f1f1;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.mat-btn-theme {
+    background-color: #3da5da;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+button:focus {
+    outline: none;
+}
+
+:host /deep/ .mat-button .mat-button-focus-overlay,
+.mat-icon-button .mat-button-focus-overlay {
+    opacity: 0 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba(0, 0, 0, .4);
+}
+
+
+:host /deep/ mat-cell.mat-cell,
+mat-header-cell.mat-header-cell {
+    padding: 8px 0px 8px 0;
+    line-height: 1.6;
+}
+
+
+.swal2-popup .swal2-title {
+    font-size: 20px !important;
+}
+
+.mat-icon-button {
+    text-align: left;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.mat-icon-button .mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+}
+
+.mat-header-cell {
+    color: #404040;
+    font-size: 14px;
+}
+
+
+.header {
+    font-size: 12px;
+}
+
+.mat-header-cell {
+    color: black;
+}
+
+.cell {
+    word-break: break-all;
+    font-size: 12px;
+    margin-right: 0;
+}
+
+mat-card.mat-card {
+    padding: 30px;
+}
+
+
+.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label {
+    color: inherit;
+}
+
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after,
+.mat-input-element:disabled {
+    color: inherit;
+    cursor: not-allowed;
+}
+
+.mat-tab-label-active:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #0ec188;
+    bottom: 0;
+
+}
+

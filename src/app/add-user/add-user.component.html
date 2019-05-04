@@ -1,0 +1,101 @@
+<mat-card class="mat-card">
+
+  <div class="mainForm">
+    <span class="close-icon" (click)="closePanel()"></span>
+    <form [formGroup]="userForm">
+      <div class="example-container row">
+        <div class="col-md-4 col-sm-6 col-xl-4 col-lg-4 col-12">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" #first_name formControlName="first_name"
+              (blur)="removeExtraSpaces('first_name')" maxlength="20" required>
+            <mat-error *ngIf="userForm.get('first_name').hasError('required')">
+              Required field cannot be left blank
+            </mat-error>
+            <mat-error *ngIf="userForm.get('first_name').hasError('pattern')">
+              Please enter a valid First name
+            </mat-error>
+            <mat-error *ngIf="userForm.get('first_name').errors?.serverError">
+              {{ userForm.get('first_name').errors?.message }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xl-4 col-lg-4 col-12">
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" #last_name formControlName="last_name"
+              (blur)="removeExtraSpaces('last_name')" maxlength="20" required>
+            <mat-error *ngIf="userForm.get('last_name').hasError('required')">
+              Required field cannot be left blank
+            </mat-error>
+            <mat-error *ngIf="userForm.get('last_name').hasError('pattern')">
+              Please enter a valid Last name
+            </mat-error>
+            <mat-error *ngIf="userForm.get('last_name').errors?.serverError">
+              {{ userForm.get('last_name').errors?.message }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xl-4 col-lg-4 col-12">
+          <!-- <mat-form-field>
+                <input matInput placeholder="Contact Number" formControlName="contact" required> -->
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput placeholder="Contact Number" #contact formControlName="contact" required>
+            <mat-error *ngIf="userForm.get('contact').hasError('required')">
+              Required field cannot be left blank
+            </mat-error>
+            <mat-error *ngIf="userForm.get('contact').hasError('pattern')">
+              Enter a valid contact number
+            </mat-error>
+            <mat-error *ngIf="userForm.get('contact').hasError('minlength')">
+              Contact number minimum 8 character length
+            </mat-error>
+            <mat-error *ngIf="userForm.get('contact').hasError('maxlength')">
+              Contact number maximum 15 character length
+            </mat-error>
+            <mat-error *ngIf="userForm.get('contact').errors?.serverError">
+              {{ userForm.get('contact').errors?.message }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xl-4 col-lg-4 col-12">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" #email formControlName="email" (blur)="removeExtraSpaces('email')"
+              required>
+            <mat-error *ngIf="userForm.get('email').hasError('required')">
+              Required field cannot be left blank
+            </mat-error>
+            <mat-error *ngIf="userForm.get('email').hasError('pattern')">
+              Enter a valid email.
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xl-4 col-lg-4 col-12">
+          <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select placeholder="Gender" formControlName="gender" required>
+              <mat-option [value]=1>Male</mat-option>
+              <mat-option [value]=2>Female</mat-option>
+            </mat-select>
+            <mat-error *ngIf="userForm.get('gender').hasError('required')">
+              Required field cannot be left blank
+            </mat-error>
+            <mat-error *ngIf="userForm.get('gender').errors?.serverError">
+              {{ userForm.get('gender').errors?.message }}
+            </mat-error>
+
+          </mat-form-field>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div class="text-center bottom-button">
+    <button mat-raised-button class="mat-btn-theme submitBtn" [disabled]="!userForm.valid"
+      (click)="submitForm(userForm)">{{fromBtnText}}</button>
+  </div>
+</mat-card>

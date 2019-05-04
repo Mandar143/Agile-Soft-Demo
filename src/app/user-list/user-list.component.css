@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+  }
+  
+    .mat-elevation-z8{
+    margin-top: 15px;
+  }
+  .mat-icon-right{
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+  
+  .cell{
+    word-break: break-all;
+    font-size: 12px;
+  }
+  
+  .mat-header-cell {
+    color: black;
+  }
+  
+   
+  .heading {
+    color: #0062a8;
+  }
+    
+  .dashboard-table {
+    border: 1px solid #ebedf2;
+    width: 100%;
+  }
+
+  .mat-header-section {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+    margin: 0 -24px;
+    padding: 0px 24px 24px 16px;
+    margin-bottom: 20px;
+  }
+  
+  
+   .edit-button{
+     width: 10px;
+     height: 30px;
+     display: inline-block;
+     min-width: auto;
+     padding: 0 11px;
+   }
+   .delete-button{
+     width: 10px;
+     height: 30px;
+     display: inline-block;
+     min-width: auto;
+     padding: 0 11px;
+   }
+  
